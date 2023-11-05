@@ -1,6 +1,4 @@
 using System;
-using System.Threading;
-using System.Collections.Generic;
 
 class Program
 {
@@ -27,22 +25,13 @@ class Program
                     reflection.Start();
                     break;
                 case "3":
-                    Console.WriteLine("goodbye!");
+                    Console.WriteLine("Goodbye!");
                     Environment.Exit(0);
                     break;
                 default:
-                    Console.WriteLine("invalid choice. Please select again.");
+                    Console.WriteLine("Invalid choice. Please select again.");
                     break;
-    
             }
         }
     }
-
-    
 }
-
-
-
-
-
-   
