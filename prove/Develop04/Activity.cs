@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Collections.Generic;
 
-// Common base class for all activities
+// base class for all activities
 class Activity
 {
     public string Name { get; set; }
@@ -14,7 +14,7 @@ class Activity
         Name = name;
         Description = description;
     }
-
+    // start activity, enter duration of activity, prepare to begin
     public virtual void Start()
     {
         Console.WriteLine($"Activity: {Name}");
@@ -24,20 +24,20 @@ class Activity
         Console.WriteLine("Prepare to begin...");
         ShowSpinner(3); // Pause for 3 seconds
     }
-
+// End activity
     public virtual void End()
     {
         Console.WriteLine("You've done a good job!");
         Console.WriteLine($"Activity: {Name} completed in {Duration} seconds.");
         ShowSpinner(3); // Pause for 3 seconds
     }
-
+// show spinner
     public void ShowSpinner(int seconds)
     {
         for (int i = 0; i < seconds; i++)
         {
             Console.Write(".");
-            Thread.Sleep(1000); // Pause for 1 second
+            Thread.Sleep(1000); // Pause 1 second
         }
     }
 }

@@ -27,12 +27,13 @@ class Program
                     reflection.Start();
                     break;
                 case "3":
-                    Console.WriteLine("Goodbye!");
+                    Console.WriteLine("goodbye!");
                     Environment.Exit(0);
                     break;
                 default:
-                    Console.WriteLine("Invalid choice. Please select a valid option.");
+                    Console.WriteLine("invalid choice. Please select again.");
                     break;
+    
             }
         }
     }
