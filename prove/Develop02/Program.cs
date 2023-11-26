@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 
 using System.IO;
+
 class Menu
 {
     public static void DisplayMenu()
@@ -82,37 +83,12 @@ class Program
         }
     }
 
-    static void WriteNewEntry(Journal journal)
-    {
-        List<string> prompts = new List<string>
-        {
-            "Who was the most interesting person I interacted with today?",
-            "What was the best part of my day?",
-            "How did I see the hand of the Lord in my life today?",
-            "What was the strongest emotion I felt today?",
-            "If I had one thing I could do over today, what would it be?"
-        };
-
-        Console.WriteLine("Choose a prompt from the list:");
-
-        for (int i = 0; i < prompts.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {prompts[i]}");
-        }
-
-        Console.Write("Select a prompt number: ");
-        if (int.TryParse(Console.ReadLine(), out int promptNumber) && promptNumber >= 1 && promptNumber <= prompts.Count)
-        {
-            Console.Write("Write your response: ");
-            string response = Console.ReadLine();
+    
 
             JournalEntry entry = new JournalEntry(prompts[promptNumber - 1], response);
             journal.AddEntry(entry);
             Console.WriteLine("Entry added successfully.");
-        }
-        else
-        {
-            Console.WriteLine("Invalid prompt number.");
-        }
-    }
+
+            JournalEntry entry = new JournalEntry(prompt, response, date);
+            AddEntry(entry);
 }

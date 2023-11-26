@@ -21,8 +21,11 @@ public class JournalEntry
         Prompt = prompt;
         Response = response;
         Date = DateTime.Now;
+
+        return $"[{Date}] {Prompt}: {Response}";
         
     }
+
 
 
 }
