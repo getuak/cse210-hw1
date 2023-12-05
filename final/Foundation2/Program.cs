@@ -22,7 +22,15 @@ class Program
         List<Product> order2Products = new List<Product> { product1, product2 };
         Order order2 = new Order(nonUsCustomer, order2Products);
 
-        Console.WriteLine("order1");
-        Console.WriteLine("order2");
+        Console.WriteLine("Order 1:");
+        Console.WriteLine($"Packing Label:\n{order1.GetPackingLabel()}");
+        Console.WriteLine($"Shipping Label:\n{order1.GetShippingLabel()}");
+        Console.WriteLine($"Total Cost: ${order1.CalculateTotalCost():F2}\n");
+
+        Console.WriteLine("Order 2:");
+        Console.WriteLine($"Packing Label:\n{order2.GetPackingLabel()}");
+        Console.WriteLine($"Shipping Label:\n{order2.GetShippingLabel()}");
+        Console.WriteLine($"Total Cost: ${order2.CalculateTotalCost():F2}");
     }
 }
+    
