@@ -7,7 +7,7 @@ public class Running : Activity
     public Running(DateTime date, int lengthMinutes, double distance)
         : base(date, lengthMinutes)
     {
-        _distance = distance;
+            _distance = distance;
     }
 
     public override double GetDistance()

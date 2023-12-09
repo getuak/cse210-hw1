@@ -9,7 +9,7 @@ public class Swimming : Activity
     public Swimming(DateTime date, int lengthMinutes, int laps)
         : base(date, lengthMinutes)
     {
-        this._laps = laps;
+            _laps = laps;
     }
 
     public override double GetDistance()

@@ -4,28 +4,28 @@ using System.Collections.Generic;
 // Base class
 public class Activity
 {
-    private DateTime _date;
-    private int _lengthMinutes;
+    protected DateTime _date;
+    protected int _lengthMinutes;
 
     public Activity(DateTime date, int lengthMinutes)
     {
-        this._date = date;
-        this._lengthMinutes = lengthMinutes;
+            _date = date;
+            _lengthMinutes = lengthMinutes;
     }
 
     public virtual double GetDistance()
     {
-        return 0.0;
+        return 0;
     }
 
     public virtual double GetSpeed()
     {
-        return 0.0;
+        return 0;
     }
 
     public virtual double GetPace()
     {
-        return 0.0;
+        return 0;
     }
 
     public string GetSummary()
