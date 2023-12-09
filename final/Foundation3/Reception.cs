@@ -8,7 +8,7 @@ public class Reception : Event
     public Reception(string title, string description, DateTime date, TimeSpan time, Address address, string rsvpEmail)
         : base(title, description, date, time, address)
     {
-        this._rsvpEmail = rsvpEmail;
+            _rsvpEmail = rsvpEmail;
     }
 
     public override string GetFullDetails()

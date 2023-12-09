@@ -12,11 +12,11 @@ public class Event
 
     public Event(string title, string description, DateTime date, TimeSpan time, Address address)
     {
-        this._title = title;
-        this._description = description;
-        this._date = date;
-        this._time = time;
-        this._address = address;
+            _title = title;
+            _description = description;
+            _date = date;
+            _time = time;
+            _address = address;
     }
 
     public string GetStandardDetails()
